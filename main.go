@@ -13,13 +13,9 @@ import (
 	"github.com/leancloud/go-sdk/leancloud"
 )
 
-func run() {
-	log.Println("开始运行")
-	cfg, err := config.ReadConfigFile("config.json") // code/config.json
-	if err != nil {
-		log.Fatalf("Failed to read config file: %v", err)
-		return
-	}
+func main() {
+	run()
+}
 	for i, v := range cfg.Account {
 		var markdown wxpush.Markdown
 		a := doTask.Input(v)
